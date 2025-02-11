@@ -2,7 +2,7 @@ import React from 'react';
 
 const VideoGameDetail = ({ videojuego, onDeleteVideojuego, onHideDetail }) => {
     if (!videojuego) {
-        return null; // No mostrar si no hay videojuego seleccionado
+        return null;
     }
 
     const handleDelete = async () => {
@@ -13,8 +13,8 @@ const VideoGameDetail = ({ videojuego, onDeleteVideojuego, onHideDetail }) => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-            onDeleteVideojuego(videojuego.id); // Notificar al padre que se ha eliminado
-            onHideDetail(); // Ocultar la vista detallada tras eliminar
+            onDeleteVideojuego(videojuego.id); 
+            onHideDetail(); 
         } catch (error) {
             console.error("Error al eliminar videojuego:", error);
         }

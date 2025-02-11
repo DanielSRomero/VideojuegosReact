@@ -4,6 +4,8 @@ import CategoryMenu from './components/CategoryMenu';
 import PlatformMenu from './components/PlatformMenu';
 import SearchBox from './components/SearchBox';
 import VideoGameDetail from './components/VideoGameDetail';
+import api from './services/api';
+
 
 function App() {
     const [videojuegos, setVideojuegos] = useState([]);
@@ -24,16 +26,8 @@ function App() {
 
 
     const fetchVideojuegos = async () => {
-        try {
-            const response = await fetch('http://localhost:3001/videojuegos');
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            const data = await response.json();
-            setVideojuegos(data);
-        } catch (error) {
-            console.error("Error al obtener videojuegos:", error);
-        }
+      const response = await api("videojuegos")
+      setVideojuegos(response)
     };
 
     const handleCategoryChange = (categories) => {

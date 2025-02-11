@@ -1,25 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import api from '../services/api';
 
 const CategoryMenu = ({ onCategoryChange }) => {
     const [categorias, setCategorias] = useState([]);
     const [selectedCategories, setSelectedCategories] = useState([]);
 
+    const getCategorias = async () => {
+        const response = await api("categorias")
+        setCategorias(response)
+    }
+
     useEffect(() => {
-            fetch('http://localhost:3001/categorias')
-                .then(response => {
-                    console.log("Fetch Response:", response);
-                    if (!response.ok) {
-                        console.error("HTTP error!", response.status);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    console.log("Fetch Data:", data);
-                    setCategorias(data);
-                })
-                .catch(error => {
-                    console.error("Fetch Error:", error);
-                });
+            getCategorias();
         }, []);
 
     const handleCategoryCheckboxChange = (categoria) => {

@@ -1,26 +1,18 @@
 import React, { useState, useEffect } from 'react';
+import api from '../services/api';
 
 const PlatformMenu = ({ onPlatformChange }) => {
     const [plataformas, setPlataformas] = useState([]);
     const [selectedPlatforms, setSelectedPlatforms] = useState([]);
 
+    const getPlataformas = async () => {
+        const response = await api("plataformas")
+        setPlataformas(response)
+    }
+
     useEffect(() => {
-        fetch('http://localhost:3001/plataformas')
-            .then(response => {
-                console.log("Fetch Response:", response);
-                if (!response.ok) {
-                    console.error("HTTP error!", response.status);
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log("Fetch Data:", data);
-                setPlataformas(data);
-            })
-            .catch(error => {
-                console.error("Fetch Error:", error);
-            });
-    }, []);
+        getPlataformas();
+        }, []);
 
     const handlePlatformCheckboxChange = (plataforma) => {
         let updatedPlatforms;
