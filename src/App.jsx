@@ -45,13 +45,13 @@ function App() {
     const applyFilters = () => {
         let filtered = [...videojuegos];
 
-        if (selectedCategories.length > 0 && selectedCategories.length < getCategories().length) { // Solo filtrar si no todas están seleccionadas
+        if (selectedCategories.length > 0 && selectedCategories.length < getCategories().length) {
             filtered = filtered.filter(videojuego =>
                 videojuego.categorias.some(categoria => selectedCategories.includes(categoria))
             );
         }
 
-        if (selectedPlatforms.length > 0 && selectedPlatforms.length < getPlatforms().length) { // Solo filtrar si no todas están seleccionadas
+        if (selectedPlatforms.length > 0 && selectedPlatforms.length < getPlatforms().length) {
             filtered = filtered.filter(videojuego =>
                 videojuego.plataformas.some(plataforma => selectedPlatforms.includes(plataforma))
             );
@@ -100,8 +100,8 @@ function App() {
         <div>
             <h1>Aplicación de Videojuegos</h1>
 
-            <CategoryMenu onCategoryChange={handleCategoryChange} />
-            <PlatformMenu onPlatformChange={handlePlatformChange} />
+            <CategoryMenu onCategoriasChange={handleCategoryChange} />
+            <PlatformMenu onPlataformasChange={handlePlatformChange} />
             <SearchBox onSearchChange={handleSearchChange} />
 
             <VideoGameList videojuegos={filteredVideojuegos} onVideojuegoSelect={handleVideojuegoSelect} />

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import api from '../services/api';
 
-const PlatformMenu = ({ onPlatformChange }) => {
+const PlatformMenu = ({ onPlataformasChange }) => {
     const [plataformas, setPlataformas] = useState([]);
-    const [selectedPlatforms, setSelectedPlatforms] = useState([]);
+    const [selectedPlataformas, setSelectedPlataformas] = useState([]);
 
     const getPlataformas = async () => {
         const response = await api("plataformas")
@@ -14,27 +14,27 @@ const PlatformMenu = ({ onPlatformChange }) => {
         getPlataformas();
         }, []);
 
-    const handlePlatformCheckboxChange = (plataforma) => {
-        let updatedPlatforms;
-        if (selectedPlatforms.includes(plataforma)) {
-            updatedPlatforms = selectedPlatforms.filter(plat => plat !== plataforma);
+    const handlePlataformasCheckboxChange = (plataforma) => {
+        let updatedPlataformas;
+        if (selectedPlataformas.includes(plataforma)) {
+            updatedPlataformas = selectedPlataformas.filter(plat => plat !== plataforma);
         } else {
-            updatedPlatforms = [...selectedPlatforms, plataforma];
+            updatedPlataformas = [...selectedPlataformas, plataforma];
         }
-        setSelectedPlatforms(updatedPlatforms);
-        onPlatformChange(updatedPlatforms); // Notificar al padre plataformas seleccionadas
+        setSelectedPlataformas(updatedPlataformas);
+        onPlataformasChange(updatedPlataformas);
     };
 
     return (
-        <div style={{ display: 'flex', justifyContent: 'center', margin: '20px 0' }}>
+        <div style={{ display: 'flex', justifyContent: 'flex-start', margin: '20px 0' }}>
             {plataformas.map(plataforma => (
                 <div key={plataforma.nombre} style={{ margin: '0 10px' }}>
                     <label>
                         <input
                             type="checkbox"
                             value={plataforma.nombre}
-                            checked={selectedPlatforms.includes(plataforma.nombre)}
-                            onChange={() => handlePlatformCheckboxChange(plataforma.nombre)}
+                            checked={selectedPlataformas.includes(plataforma.nombre)}
+                            onChange={() => handlePlataformasCheckboxChange(plataforma.nombre)}
                         />
                         {plataforma.nombre}
                     </label>

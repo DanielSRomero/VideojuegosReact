@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import api from '../services/api';
 
-const CategoryMenu = ({ onCategoryChange }) => {
+const CategoryMenu = ({ onCategoriasChange }) => {
+
     const [categorias, setCategorias] = useState([]);
-    const [selectedCategories, setSelectedCategories] = useState([]);
+    const [selectedCategoria, setSelectedCategoria] = useState('');
 
     const getCategorias = async () => {
         const response = await api("categorias")
@@ -12,34 +13,28 @@ const CategoryMenu = ({ onCategoryChange }) => {
 
     useEffect(() => {
             getCategorias();
-        }, []);
+        }, 
+        []);
 
-    const handleCategoryCheckboxChange = (categoria) => {
-        let updatedCategories;
-        if (selectedCategories.includes(categoria)) {
-            updatedCategories = selectedCategories.filter(cat => cat !== categoria);
-        } else {
-            updatedCategories = [...selectedCategories, categoria];
-        }
-        setSelectedCategories(updatedCategories);
-        onCategoryChange(updatedCategories);
+    const handleCategoriaSelectChange = (event) => {
+        const categoriaSeleccionada = event.target.value;
+        setSelectedCategoria(categoriaSeleccionada);
+        onCategoriasChange(categoriaSeleccionada ? [categoriaSeleccionada] : []);
     };
 
     return (
-        <div style={{ display: 'flex', justifyContent: 'center', margin: '20px 0' }}>
-            {categorias.map(categoria => (
-                <div key={categoria.nombre} style={{ margin: '0 10px' }}>  
-                    <label>
-                        <input
-                            type="checkbox"
-                            value={categoria.nombre}
-                            checked={selectedCategories.includes(categoria.nombre)}
-                            onChange={() => handleCategoryCheckboxChange(categoria.nombre)}
-                        />
-                        {categoria.nombre} 
-                    </label>
-                </div>
-            ))}
+        <div style={{ display: 'flex', justifyContent: 'flex-start', margin: '20px 0' }}>
+            <select
+                value={selectedCategoria}
+                onChange={handleCategoriaSelectChange}
+            >
+                <option value="">Selecciona una categoría</option> {}
+                {categorias.map(categoria => (
+                    <option key={categoria.nombre} value={categoria.nombre}>
+                        {categoria.nombre}
+                    </option>
+                ))}
+            </select>
         </div>
     );
 };

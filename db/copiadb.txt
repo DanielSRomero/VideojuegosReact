@@ -81,7 +81,7 @@
       "plataformas": ["PC", "PS4", "Xbox One", "Switch", "Android", "iOS", "Otras"],
       "categorias": ["Aventura", "Simulación", "Puzzle", "Educación"],
       "precio": 24.99,
-      "url_imagen": "https://upload.wikimedia.org/wikipedia/commons/6/64/Minecraft-creeper-face.svg",
+      "url_imagen": "https://upload.wikimedia.org/wikipedia/commons/5/51/Minecraft_cover.png",
       "url_video": "https://www.youtube.com/embed/MmB9b5njVbA"
     },
     {
