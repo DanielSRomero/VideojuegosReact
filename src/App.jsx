@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import VideoGameList from './components/VideoGameLIst';
+import VideoGameList from './components/VideoGameList';
 import CategoryMenu from './components/CategoryMenu';
 import PlatformMenu from './components/PlatformMenu';
 import SearchBox from './components/SearchBox';
@@ -97,7 +97,7 @@ function App() {
 
 
     return (
-        <div>
+        <>
             <h1>Aplicación de Videojuegos</h1>
 
             <CategoryMenu onCategoriasChange={handleCategoryChange} />
@@ -105,7 +105,7 @@ function App() {
             <SearchBox onSearchChange={handleSearchChange} />
 
             <VideoGameList videojuegos={filteredVideojuegos} onVideojuegoSelect={handleVideojuegoSelect} />
-
+            
             {showDetail && (
                 <VideoGameDetail
                     videojuego={selectedVideojuego}
@@ -113,8 +113,7 @@ function App() {
                     onHideDetail={handleHideDetail}
                 />
             )}
-
-        </div>
+        </>
     );
 }
 
