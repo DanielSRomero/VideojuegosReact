@@ -7,8 +7,12 @@ const CategoryMenu = ({ onCategoriasChange }) => {
     const [selectedCategoria, setSelectedCategoria] = useState('');
 
     const getCategorias = async () => {
-        const response = await api("categorias")
-        setCategorias(response)
+        try {
+            const response = await api.get("http://localhost:3000/categorias");
+            setCategorias(response.data);
+        } catch (error) {
+            console.error("Error al obtener categorías:", error);
+        }
     }
 
     useEffect(() => {

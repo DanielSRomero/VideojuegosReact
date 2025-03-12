@@ -1,8 +1,7 @@
 import React from 'react';
 
 const VideoGameList = ({ videojuegos, onVideojuegoSelect }) => {
-
-
+    
     return (
         <div>
             <h2>Listado de Videojuegos</h2>

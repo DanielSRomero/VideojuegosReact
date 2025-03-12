@@ -1,11 +1,19 @@
-const getData = async (seccion) => {
-    try {
-        const server = await fetch('http://localhost:3001/' + seccion)     
-        const data = await server.json();
-        return data
-                
-    } catch (error) {
-        console.error("Fetch Error:", error);
+import axios from "axios";
+import { TOKEN_KEY } from "../context/AuthContext";
+
+const api = axios.create({
+            headers: {
+                'Content-Type' : 'Application/json'
+            },
+            baseURL: 'http://localhost:3000/',
+})
+
+api.interceptors.request.use((config) => {
+    const token = localStorage.getItem(TOKEN_KEY)
+    if (token) {
+        config.headers.Authorization = `Bearer ${token}`
     }
-}
-export default getData
+    return config
+})
+
+export default api

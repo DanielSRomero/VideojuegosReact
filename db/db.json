@@ -1,4 +1,41 @@
 {
+  "users": [
+    {
+      "email": "dani@gmail.com",
+      "password": "$2a$10$4r2rDUBEs/m5N5RPcY3TmuJmFEactvkDMi4z./TWiaIZDpczcmx36",
+      "id": 1
+    },
+    {
+      "email": "alex@gmail.com",
+      "password": "$2a$10$jDTta3LnkvTjuFWTxVrL1ui8i/Mkb9O.vQMcWM9UJTGCSeiJcO6DS",
+      "id": 2
+    },
+    {
+      "email": "marcos@gmail.com",
+      "password": "$2a$10$RUagPRmWdED6Hm/fmUU37.ms5Ui/jG5VHDPw8IfFpT271eEDPSJOi",
+      "id": 3
+    },
+    {
+      "email": "ejemplo@gmail.com",
+      "password": "$2a$10$u0BBU37nzwqbBtzZ3AQN6OKYY0UqgiC52fk/bMI.46UFF9.QJO12a",
+      "id": 4
+    },
+    {
+      "email": "perra@gmail.com",
+      "password": "$2a$10$VUlljmnooXX2ghnk3hh1AeFElHpcNTaFqieF7OGm26z5gTKvyH4lK",
+      "id": 5
+    },
+    {
+      "email": "hola@gmail.com",
+      "password": "$2a$10$/bqcFS/F754lBhl9UUHx2OrvW1qFr0BbHsmwOsNzi94VIdmaF8OkG",
+      "id": 6
+    },
+    {
+      "email": "ejemplo2@gmail.com",
+      "password": "$2a$10$bOzVFyAt3u30Vy8o3ypcqeSaSvS1CVdeteu.Oju5t9A/o0V6PILai",
+      "id": 7
+    }
+  ],
   "videojuegos": [
     {
       "id": 1,
@@ -6,8 +43,14 @@
       "descripcion": "Un juego de aventura de mundo abierto aclamado por la crítica, conocido por su libertad y exploración.",
       "fecha_lanzamiento": "2017-03-03",
       "compañía": "Nintendo",
-      "plataformas": ["Switch", "Wii U"],
-      "categorias": ["Aventura", "Rol"],
+      "plataformas": [
+        "Switch",
+        "Wii U"
+      ],
+      "categorias": [
+        "Aventura",
+        "Rol"
+      ],
       "precio": 59.99,
       "url_imagen": "https://cdn.cloudflare.steamstatic.com/steam/apps/659320/header.jpg?t=1678878447",
       "url_video": "https://www.youtube.com/embed/1rPxiXXxftE"
@@ -18,8 +61,14 @@
       "descripcion": "La quinta entrega principal de la renombrada serie de juegos de lucha Street Fighter.",
       "fecha_lanzamiento": "2016-02-16",
       "compañía": "Capcom",
-      "plataformas": ["PC", "PS4"],
-      "categorias": ["Lucha", "Arcade"],
+      "plataformas": [
+        "PC",
+        "PS4"
+      ],
+      "categorias": [
+        "Lucha",
+        "Arcade"
+      ],
       "precio": 29.99,
       "url_imagen": "https://cdn.cloudflare.steamstatic.com/steam/apps/310950/header.jpg?t=1693579997",
       "url_video": "https://www.youtube.com/embed/Jfbzu_OuWjg"
@@ -30,8 +79,13 @@
       "descripcion": "Únete a Mario en una aventura mundial masiva en 3D y usa sus nuevas habilidades increíbles para recoger Lunas para que puedas impulsar tu dirigible, el Odyssey, y rescatar a la Princesa Peach de los planes de boda de Bowser!",
       "fecha_lanzamiento": "2017-10-27",
       "compañía": "Nintendo",
-      "plataformas": ["Switch"],
-      "categorias": ["Plataformas", "Aventura"],
+      "plataformas": [
+        "Switch"
+      ],
+      "categorias": [
+        "Plataformas",
+        "Aventura"
+      ],
       "precio": 54.99,
       "url_imagen": "https://cdn.cloudflare.steamstatic.com/steam/apps/1885300/header.jpg?t=1690471835",
       "url_video": "https://www.youtube.com/embed/wGQHQc_3dgE"
@@ -42,8 +96,15 @@
       "descripcion": "Desata tu furia en DOOM Eternal, la última entrega de la aclamada franquicia de shooters en primera persona.",
       "fecha_lanzamiento": "2020-03-20",
       "compañía": "id Software",
-      "plataformas": ["PC", "PS4", "Xbox One"],
-      "categorias": ["Shooter", "Arcade"],
+      "plataformas": [
+        "PC",
+        "PS4",
+        "Xbox One"
+      ],
+      "categorias": [
+        "Shooter",
+        "Arcade"
+      ],
       "precio": 39.99,
       "url_imagen": "https://cdn.cloudflare.steamstatic.com/steam/apps/782330/header.jpg?t=1692883422",
       "url_video": "https://www.youtube.com/embed/6yVCuoPQvDU"
@@ -54,8 +115,16 @@
       "descripcion": "Sid Meier's Civilization VI es la sexta entrega de la galardonada serie Civilization.",
       "fecha_lanzamiento": "2016-10-21",
       "compañía": "2K Games",
-      "plataformas": ["PC", "Switch", "iOS", "Android"],
-      "categorias": ["Estrategia", "Simulación"],
+      "plataformas": [
+        "PC",
+        "Switch",
+        "iOS",
+        "Android"
+      ],
+      "categorias": [
+        "Estrategia",
+        "Simulación"
+      ],
       "precio": 49.99,
       "url_imagen": "https://cdn.cloudflare.steamstatic.com/steam/apps/289070/header.jpg?t=1692887827",
       "url_video": "https://www.youtube.com/embed/5KdE0pT_qWk"
@@ -66,8 +135,16 @@
       "descripcion": "EA SPORTS™ FIFA 23 te trae aún más acción y realismo al terreno de juego en 'El juego del mundo'.",
       "fecha_lanzamiento": "2022-09-30",
       "compañía": "EA Sports",
-      "plataformas": ["PC", "PS5", "Xbox One", "Switch"],
-      "categorias": ["Deporte", "Simulación"],
+      "plataformas": [
+        "PC",
+        "PS5",
+        "Xbox One",
+        "Switch"
+      ],
+      "categorias": [
+        "Deporte",
+        "Simulación"
+      ],
       "precio": 69.99,
       "url_imagen": "https://cdn.cloudflare.steamstatic.com/steam/apps/1811260/header.jpg?t=1695121803",
       "url_video": "https://www.youtube.com/embed/oIxY6TetrUQ"
@@ -78,8 +155,21 @@
       "descripcion": "Minecraft es un juego sandbox de supervivencia de mundo abierto creado por el desarrollador sueco Mojang Studios.",
       "fecha_lanzamiento": "2011-11-18",
       "compañía": "Mojang Studios",
-      "plataformas": ["PC", "PS4", "Xbox One", "Switch", "Android", "iOS", "Otras"],
-      "categorias": ["Aventura", "Simulación", "Puzzle", "Educación"],
+      "plataformas": [
+        "PC",
+        "PS4",
+        "Xbox One",
+        "Switch",
+        "Android",
+        "iOS",
+        "Otras"
+      ],
+      "categorias": [
+        "Aventura",
+        "Simulación",
+        "Puzzle",
+        "Educación"
+      ],
       "precio": 24.99,
       "url_imagen": "https://upload.wikimedia.org/wikipedia/commons/6/64/Minecraft-creeper-face.svg",
       "url_video": "https://www.youtube.com/embed/MmB9b5njVbA"
@@ -90,8 +180,17 @@
       "descripcion": "Juega con 4-15 jugadores en línea o vía WiFi local mientras intentas preparar tu nave espacial para la salida, pero ten cuidado, ya que uno o más jugadores aleatorios entre la Tripulación son Impostores que buscan matar a todos!",
       "fecha_lanzamiento": "2018-06-15",
       "compañía": "Innersloth",
-      "plataformas": ["PC", "Switch", "Android", "iOS"],
-      "categorias": ["Aventura", "Estrategia", "Puzzle"],
+      "plataformas": [
+        "PC",
+        "Switch",
+        "Android",
+        "iOS"
+      ],
+      "categorias": [
+        "Aventura",
+        "Estrategia",
+        "Puzzle"
+      ],
       "precio": 4.99,
       "url_imagen": "https://cdn.cloudflare.steamstatic.com/steam/apps/945360/header.jpg?t=1690554386",
       "url_video": "https://www.youtube.com/embed/gyz90Nz8Fvs"
@@ -102,8 +201,16 @@
       "descripcion": "The Witcher 3: Wild Hunt es un juego de rol de acción de mundo abierto en tercera persona basado en la serie de novelas de Andrzej Sapkowski.",
       "fecha_lanzamiento": "2015-05-19",
       "compañía": "CD Projekt Red",
-      "plataformas": ["PC", "PS5", "Xbox One", "Switch"],
-      "categorias": ["Rol", "Aventura"],
+      "plataformas": [
+        "PC",
+        "PS5",
+        "Xbox One",
+        "Switch"
+      ],
+      "categorias": [
+        "Rol",
+        "Aventura"
+      ],
       "precio": 39.99,
       "url_imagen": "https://cdn.cloudflare.steamstatic.com/steam/apps/292030/header.jpg?t=1689768448",
       "url_video": "https://www.youtube.com/embed/c0i88t0KCs4"
@@ -114,33 +221,75 @@
       "descripcion": "Portal 2 se basa en la galardonada fórmula de jugabilidad y narración innovadoras y acertadas de Portal.",
       "fecha_lanzamiento": "2011-04-19",
       "compañía": "Valve",
-      "plataformas": ["PC", "Xbox One"],
-      "categorias": ["Puzzle", "Plataformas"],
+      "plataformas": [
+        "PC",
+        "Xbox One"
+      ],
+      "categorias": [
+        "Puzzle",
+        "Plataformas"
+      ],
       "precio": 9.99,
       "url_imagen": "https://cdn.cloudflare.steamstatic.com/steam/apps/620/header.jpg?t=1678878471",
       "url_video": "https://www.youtube.com/embed/A88Cw3Cqmnk"
     }
   ],
   "categorias": [
-    { "nombre": "Lucha" },
-    { "nombre": "Arcade" },
-    { "nombre": "Plataformas" },
-    { "nombre": "Shooter" },
-    { "nombre": "Estrategia" },
-    { "nombre": "Simulación" },
-    { "nombre": "Deporte" },
-    { "nombre": "Aventura" },
-    { "nombre": "Rol" },
-    { "nombre": "Educación" },
-    { "nombre": "Puzzle" }
+    {
+      "nombre": "Lucha"
+    },
+    {
+      "nombre": "Arcade"
+    },
+    {
+      "nombre": "Plataformas"
+    },
+    {
+      "nombre": "Shooter"
+    },
+    {
+      "nombre": "Estrategia"
+    },
+    {
+      "nombre": "Simulación"
+    },
+    {
+      "nombre": "Deporte"
+    },
+    {
+      "nombre": "Aventura"
+    },
+    {
+      "nombre": "Rol"
+    },
+    {
+      "nombre": "Educación"
+    },
+    {
+      "nombre": "Puzzle"
+    }
   ],
   "plataformas": [
-    { "nombre": "PC" },
-    { "nombre": "PS5" },
-    { "nombre": "Xbox One" },
-    { "nombre": "Switch" },
-    { "nombre": "Android" },
-    { "nombre": "iOS" },
-    { "nombre": "Otras" }
+    {
+      "nombre": "PC"
+    },
+    {
+      "nombre": "PS5"
+    },
+    {
+      "nombre": "Xbox One"
+    },
+    {
+      "nombre": "Switch"
+    },
+    {
+      "nombre": "Android"
+    },
+    {
+      "nombre": "iOS"
+    },
+    {
+      "nombre": "Otras"
+    }
   ]
 }

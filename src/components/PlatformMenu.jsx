@@ -6,8 +6,12 @@ const PlatformMenu = ({ onPlataformasChange }) => {
     const [selectedPlataformas, setSelectedPlataformas] = useState([]);
 
     const getPlataformas = async () => {
-        const response = await api("plataformas")
-        setPlataformas(response)
+        try {
+            const response = await api.get("http://localhost:3000/plataformas");
+            setPlataformas(response.data);
+        } catch (error) {
+            console.error("Error al obtener las plataformas:", error);
+        }
     }
 
     useEffect(() => {
